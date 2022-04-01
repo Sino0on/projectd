@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Редактирование
+{% endblock %}
+{% block content %}
+<div class="container">
+<h1>Редактирование</h1>
+<br>
+<form method="POST" action=""class="container">
+    {% csrf_token %}
+    <p> {{ form.as_p }}</p>
+    <button value="submit" class="btn btn-succes m-3">Сохранить</button>
+</form>
+</div>
+{% endblock %}

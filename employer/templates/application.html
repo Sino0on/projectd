@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}
+Создать заявку
+{% endblock %}
+{% block content %}
+<h1 class="container">Заявка</h1>
+<form method="POST" action="" class="container ">
+    {% csrf_token %}
+    <div class="container">
+    <p>{{ form.as_p }}</p>
+    </div>
+    <button type="submit" class="btn btn-succes m-5">Submit</button>
+</form>
+
+{% endblock %}
