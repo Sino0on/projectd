@@ -109,15 +109,6 @@ class Employer(models.Model):
 
     def __str__(self):
         return f'''{self.name} -
-        "{self.description}"
-        {self.direction} -
-        {self.education} -
-        {self.experience} лет
-        {self.cabinet} -
-        {self.personal_consultation} -
-        {self.online_consultation} -
-        {self.duration_consultation} минут
-        {self.couple_consultation_duration} минут
         '''
 
     class Meta:

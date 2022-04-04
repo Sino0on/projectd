@@ -307,10 +307,11 @@ blockquote p {
 ********************************************************* */
 
 #top-header {
-  position: fixed;
+  position: relative;
   z-index: 1000;
   width: 100%;
-  padding: 23px 0;
+  padding: 3px 0;
+  background: black;
 /*transition*/
   -webkit-transition: all .15s linear;
      -moz-transition: all .15s linear;
@@ -318,9 +319,7 @@ blockquote p {
           transition: all .15s linear;
 }
 
-#top-header .grid {
-  overflow: visible;
-}
+
 
 .logo {
   display: block;
@@ -339,9 +338,6 @@ blockquote p {
           animation: rubberBand 0.5s 1;
 }
 
-.header-default {
-  background: #2C2D31;
-}
 
 .header-home {
   background: transparent;

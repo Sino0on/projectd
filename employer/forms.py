@@ -22,6 +22,9 @@ class ApplocationCreateFrom(forms.ModelForm):
     class Meta:
         model = Application
         fields = ['employer', 'date', 'category']
+        # widgets = {
+        #     'employer': forms.ChoiceField()
+        # }
 
 class EmployerForm(forms.ModelForm):
     class Meta:

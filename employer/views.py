@@ -48,8 +48,10 @@ def registerPage(request):
     form = UserCreationForm()
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
+
         if form.is_valid():
             form.save()
+            return redirect('/')
     context = {'form': form}
     return render(request, 'employer/register.html', context)
 

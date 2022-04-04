@@ -85,7 +85,9 @@
                                 <div class="content staff-content">
                                     <div class="recent-work staff-img">
                                         <div class="img-wrap staff-img">
+                                            <a href="{% url 'employer_detail' i.pk %}">
                                             <img src="{{ i.photo.url }}" alt="">
+                                                </a>
                                             <div class="team-social">
                                                 <a class="sl-fb" href="#"><i class="icon-facebook"></i></a>
                                                 <a class="sl-tw" href="#"><i class="icon-twitter"></i></a>
@@ -123,6 +125,7 @@
                                     <div class="item"><!-- Start of item -->
                                     <a href="#">
                                         <figure>
+
                                             <img src="{% static 'images/clients/1.png' %}" alt="" />
                                         </figure>
                                     </a>
@@ -256,13 +259,10 @@
                                 <form method="POST">
                                     {% csrf_token %}
                                     {{ form.as_p }}
-                                    <button value="submit">Submit</button>
+                                    <button value="submit" class="btn btn-succes">Submit</button>
                                 </form>
 
-                                {% else %}
-                                    <h5>Зарегистрируйтесь чтобы оставить коментарий</h5>
-                                    <h2><a href="{% url 'registerPage' %}">Зарегистрироваться</a></h2>
-                                    <h2><a href="{% url 'login' %}">Войти</a></h2>
+
                             </div>
                              {% endif %}
                         </div>

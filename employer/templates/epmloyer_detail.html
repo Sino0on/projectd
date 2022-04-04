@@ -3,52 +3,30 @@
 Специалист
 {% endblock %}
 {% block content %}
-<div class="wrap team-wrap grey" id="team">
-                    <div class="grid grid-pad">
-                        <div class="content" >
-                            <h2>{{ employer.name }}</h2>
-                            <div class="row">
-                                <div class="col-1-4" >
-                                <div class="content staff-content">
-                                    <div class="recent-work staff-img">
-                                        <div class="img-wrap staff-img">
-                                            <img src="{{ employer.photo.url }}" alt="">
-                                            <div class="team-social">
-                                                <a class="sl-fb" href="#"><i class="icon-facebook"></i></a>
-                                                <a class="sl-tw" href="#"><i class="icon-twitter"></i></a>
-                                                <a class="sl-gp" href="#"><i class="icon-googleplus2"></i></a>
-                                                <a class="sl-ln" href="#"><i class="icon-linkedin"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="work-info staff-info">
-
-                                            {% if user.is_staff %}
-                                            <a href="{% url 'profile_edit' employer.pk %}" class="btn btn-succes">Редактировать</a>
-                                            {% endif %}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                                <div class="col">
-                                    <p>{{ employer.city }}</p>
-                                    <p>{{ employer.work }}</p>
-                                    <p>{{ employer.direction }}</p>
-                                    <p>{{ employer.description }}</p>
-                                    <p>{{ employer.education }}</p>
-                                    <p>{{ employer.experience }}</p>
-                                    <p>{{ employer.cabinet }}</p>
-                                    <p>{{ employer.personal_consultation }}</p>
-                                    <p>{{ employer.online_consultation }}</p>
-                                    <p>{{ employer.duration_consultation }}</p>
-                                    <p>{{ employer.couple_consultation_duration }}</p>
-
-
-                                </div>
-                            </div>
-
-                        </div>
+<div class="container p-5 m-5">
+<section class="home-about-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="ha-pic">
+                        <img src="{{ employer.photo.url }}" width="400" height="550" alt="">
                     </div>
                 </div>
+                <div class="col-lg-6">
+                    <div class="ha-text">
+                        <h2>Про специолиста</h2>
+                        <p>{{ employer.description }}</p>
+                        <ul>
+                            <li><span class="icon_check"></span><h4>Имя: </h4>{{ employer.name }}</li>
+                            <li><span class="icon_check"></span><h4>Город: </h4>{{ employer.city }}</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
 
                 <!-- End Team Section -->
 
